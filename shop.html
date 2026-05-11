@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Shop | IcePro Hockey Shop</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="dark-mode">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+            document.body.classList.remove('dark-mode', 'light-mode');
+            document.body.classList.add(savedTheme);
+        })();
+    </script>
+
+        <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                ICEPRO
+            </a>
+            
+            <ul class="nav-links">
+                                <li class="dropdown">
+                    <a href="#" class="nav-link">Home <i class="bi bi-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="sharpening.html" class="nav-link">Sharpening</a></li>
+                <li><a href="customization.html" class="nav-link">Customization</a></li>
+                <li><a href="repairs.html" class="nav-link">Repairs</a></li>
+                <li><a href="team-orders.html" class="nav-link">Team Orders</a></li>
+                <li><a href="shop.html" class="nav-link active" style="color: var(--accent);">Shop</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle">
+                    <i class="bi bi-translate"></i>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <a href="login.html" class="nav-link d-none d-md-block">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button class="menu-toggle d-lg-none">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section-padding hero-centered" style="background: var(--surface); border-bottom: 1px solid var(--border);">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 mx-auto reveal-up">
+                    <h1 class="accent-glow" style="font-size: 3.5rem;">PRO SHOP</h1>
+                    <p class="text-secondary mt-3 mx-auto" style="max-width: 600px;">Curated selection of high-performance gear, tape, and maintenance tools. Trusted by professionals and amateurs alike.</p>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <select style="padding: 1rem 1.5rem; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); color: #fff; border-radius: 2px; min-width: 200px;">
+                            <option>Sort by: Newest</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding hero-centered" style="background: var(--surface);">
+        <div class="container">
+
+            <div class="row g-4 stagger-container">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-bauer-vapor.html">
+                                <img src="assets/img/shop-1.png" alt="Bauer Vapor HyperLite 2" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">BAUER</span>
+                            <h4 class="mt-1"><a href="product-bauer-vapor.html">Vapor HyperLite 2</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$899.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-ccm-trigger.html">
+                                <img src="assets/img/shop-2.png" alt="CCM Ribcor Trigger 8 Pro" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">CCM</span>
+                            <h4 class="mt-1"><a href="product-ccm-trigger.html">Ribcor Trigger 8 Pro</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$329.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-howies-tape.html">
+                                <img src="assets/img/shop-3.png" alt="Howies Premium Tape" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">HOWIES</span>
+                            <h4 class="mt-1"><a href="product-howies-tape.html">Premium Cloth Tape</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$5.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-warrior-gloves.html">
+                                <img src="assets/img/shop-4.png" alt="Warrior Alpha LX2 Pro Gloves" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">WARRIOR</span>
+                            <h4 class="mt-1"><a href="product-warrior-gloves.html">Alpha LX2 Pro Gloves</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$199.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-sherwood-rekker.html">
+                                <img src="assets/img/shop-5.png" alt="Sherwood Rekker RE1 Stick" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">SHERWOOD</span>
+                            <h4 class="mt-1"><a href="product-sherwood-rekker.html">Rekker RE1 Stick</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$289.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-bauer-helmet.html">
+                                <img src="assets/img/shop-6.png" alt="Bauer Re-Akt 150 Helmet" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">BAUER</span>
+                            <h4 class="mt-1"><a href="product-bauer-helmet.html">Re-Akt 150 Helmet</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$219.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-ccm-jetspeed.html">
+                                <img src="assets/img/shop-7.png" alt="CCM JetSpeed FT6 Pro Skates" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">CCM</span>
+                            <h4 class="mt-1"><a href="product-ccm-jetspeed.html">JetSpeed FT6 Pro Skates</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$949.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="img-zoom-container">
+                            <a href="product-true-hzrdus.html">
+                                <img src="assets/img/shop-8.png" alt="True HZRDUS PX Stick" style="width: 100%; height: 250px; object-fit: cover;">
+                            </a>
+                        </div>
+                        <div class="p-4">
+                            <span class="small text-secondary">TRUE</span>
+                            <h4 class="mt-1"><a href="product-true-hzrdus.html">HZRDUS PX Stick</a></h4>
+                            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+                                <span class="fw-bold" style="color: var(--accent);">$339.99</span>
+                                <div class="cart-action-wrapper">
+                                    <button class="btn btn-primary btn-sm add-to-cart-btn">ADD TO CART</button>
+                                    <div class="qty-control">
+                                        <button class="qty-btn minus"><i class="bi bi-dash"></i></button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn plus"><i class="bi bi-plus"></i></button>
+                                        <button class="qty-btn remove ms-1"><i class="bi bi-trash3 small"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="text-center mt-5 reveal-up">
+                <div style="display: flex; gap: 0.5rem; justify-content: center;">
+                    <button class="btn btn-outline btn-sm active" style="background: var(--accent); color: #fff;">1</button>
+                    <button class="btn btn-outline btn-sm">2</button>
+                    <button class="btn btn-outline btn-sm">3</button>
+                    <button class="btn btn-outline btn-sm"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-brand">
+                <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                ICEPRO
+            </a>
+                    <p style="color: var(--secondary);">The destination for hockey precision. We specialize in sharpening, repairs, and pro-grade equipment.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="sharpening.html">Skate Sharpening</a></li>
+                        <li><a href="customization.html">Stick Customization</a></li>
+                        <li><a href="repairs.html">Equipment Repair</a></li>
+                        <li><a href="team-orders.html">Team Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">Shop Online</a></li>
+                        <li><a href="blog.html">Pro Tips Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signup.html">Join Pro Club</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: var(--secondary); margin-bottom: 1rem;">Get the latest gear news and pro tips.</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email Address" style="background: var(--surface); border: 1px solid var(--border); padding: 0.5rem; border-radius: 2px; flex: 1; color: var(--text-primary);">
+                        <button class="btn btn-primary btn-sm">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--border); padding-top: 20px; text-align: center; color: var(--secondary); font-size: 0.9rem;">
+                &copy; 2026 IcePro Hockey Shop. All rights reserved. Built for Elite Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/rtl-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Persistence Logic
+        let cart = JSON.parse(localStorage.getItem('hockey_cart')) || {};
+
+        function updateStorage() {
+            localStorage.setItem('hockey_cart', JSON.stringify(cart));
+        }
+
+        // Initialize UI based on existing storage
+        document.querySelectorAll('.stagger-card').forEach(card => {
+            const id = card.querySelector('img').alt;
+            const wrapper = card.querySelector('.cart-action-wrapper');
+            const qtyVal = card.querySelector('.qty-value');
+            
+            if (cart[id]) {
+                card.querySelector('.add-to-cart-btn').style.display = 'none';
+                card.querySelector('.qty-control').classList.add('active');
+                qtyVal.textContent = cart[id].qty;
+            }
+        });
+
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.stagger-card');
+                const id = card.querySelector('img').alt;
+                const name = card.querySelector('h4 a').textContent;
+                const price = parseFloat(card.querySelector('.fw-bold').textContent.replace('$', ''));
+                const img = card.querySelector('img').getAttribute('src');
+
+                cart[id] = { id, name, price, img, qty: 1 };
+                updateStorage();
+
+                const wrapper = this.closest('.cart-action-wrapper');
+                this.style.display = 'none';
+                wrapper.querySelector('.qty-control').classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.qty-btn.plus').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.stagger-card');
+                const id = card.querySelector('img').alt;
+                const valSpan = this.previousElementSibling;
+                
+                if (cart[id]) {
+                    cart[id].qty += 1;
+                    valSpan.textContent = cart[id].qty;
+                    updateStorage();
+                }
+            });
+        });
+
+        document.querySelectorAll('.qty-btn.minus').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.stagger-card');
+                const id = card.querySelector('img').alt;
+                const valSpan = this.nextElementSibling;
+                
+                if (cart[id] && cart[id].qty > 1) {
+                    cart[id].qty -= 1;
+                    valSpan.textContent = cart[id].qty;
+                    updateStorage();
+                }
+            });
+        });
+
+        document.querySelectorAll('.qty-btn.remove').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.stagger-card');
+                const id = card.querySelector('img').alt;
+                
+                delete cart[id];
+                updateStorage();
+
+                const wrapper = this.closest('.cart-action-wrapper');
+                wrapper.querySelector('.qty-control').classList.remove('active');
+                wrapper.querySelector('.add-to-cart-btn').style.display = 'block';
+                wrapper.querySelector('.qty-value').textContent = '1';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

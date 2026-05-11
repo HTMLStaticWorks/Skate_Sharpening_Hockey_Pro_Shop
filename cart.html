@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | IcePro Hockey Shop</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body class="dark-mode">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+            document.body.classList.remove('dark-mode', 'light-mode');
+            document.body.classList.add(savedTheme);
+        })();
+    </script>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                ICEPRO
+            </a>
+
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Home <i class="bi bi-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="sharpening.html" class="nav-link">Sharpening</a></li>
+                <li><a href="customization.html" class="nav-link">Customization</a></li>
+                <li><a href="repairs.html" class="nav-link">Repairs</a></li>
+                <li><a href="team-orders.html" class="nav-link">Team Orders</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="nav-icon-btn active" style="color: var(--accent); border-color: var(--accent);"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle">
+                    <i class="bi bi-translate"></i>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <a href="login.html" class="nav-link d-none d-md-block">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button class="menu-toggle d-lg-none">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section-padding hero-centered"
+        style="background: var(--surface); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 mx-auto reveal-up">
+                    <h1 class="accent-glow" style="font-size: 3.5rem;">YOUR CART</h1>
+                    <p class="text-secondary mt-3">Review your high-performance gear before hitting the ice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding stagger-container">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Cart Items -->
+                <div class="col-lg-8">
+                    <div class="card p-0 overflow-hidden reveal-left">
+                        <div class="table-responsive">
+                            <table class="table table-borderless mb-0" style="color: inherit;">
+                                <thead style="background: var(--background); border-bottom: 1px solid var(--border);">
+                                    <tr>
+                                        <th class="ps-4 py-3 text-uppercase small letter-spacing-1">Product</th>
+                                        <th class="py-3 text-center text-uppercase small letter-spacing-1">Quantity</th>
+                                        <th class="py-3 text-end text-uppercase small letter-spacing-1">Price</th>
+                                        <th class="pe-4 py-3"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-items">
+                                    <!-- Items will be rendered here dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 d-flex flex-wrap gap-3 justify-content-between align-items-center reveal-up">
+                        <div class="d-flex gap-2">
+                            <input type="text" placeholder="PROMO CODE" class="form-control"
+                                style="width: 180px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">
+                            <button class="btn btn-outline">APPLY</button>
+                        </div>
+                        <a href="shop.html" class="text-secondary small text-uppercase letter-spacing-1 hover-accent"
+                            style="text-decoration: none;">
+                            <i class="bi bi-arrow-left me-2"></i> Continue Shopping
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card reveal-right p-0 overflow-hidden" style="position: sticky; top: 120px; border: 1px solid var(--border);">
+                        <div class="p-4" style="background: var(--background); border-bottom: 1px solid var(--border);">
+                            <h4 class="mb-0 precision-line" style="font-size: 1.1rem; letter-spacing: 1px;">ORDER SUMMARY</h4>
+                        </div>
+                        
+                        <div class="p-4">
+                            <div class="summary-row d-flex justify-content-between mb-3">
+                                <span class="text-secondary small text-uppercase fw-bold" style="letter-spacing: 0.5px;">Subtotal</span>
+                                <span class="fw-bold" id="subtotal" style="font-family: var(--font-heading);">$0.00</span>
+                            </div>
+                            <div class="summary-row d-flex justify-content-between mb-3">
+                                <span class="text-secondary small text-uppercase fw-bold" style="letter-spacing: 0.5px;">Shipping</span>
+                                <span class="text-success small fw-bold text-uppercase">Free</span>
+                            </div>
+                            <div class="summary-row d-flex justify-content-between mb-0">
+                                <span class="text-secondary small text-uppercase fw-bold" style="letter-spacing: 0.5px;">Est. Tax (8%)</span>
+                                <span class="fw-bold" id="tax" style="font-family: var(--font-heading);">$0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 mt-2" style="background: rgba(56, 189, 248, 0.03); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 text-uppercase fw-bold" style="letter-spacing: 1px;">Total</h5>
+                                <div class="text-end">
+                                    <h2 class="mb-0 accent-glow" id="total" style="color: var(--accent); line-height: 1; font-weight: 900; font-family: var(--font-heading);">$0.00</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <a href="checkout.html" class="btn btn-primary w-100 py-3 mb-3" style="font-weight: 700; letter-spacing: 1px;">PROCEED TO CHECKOUT</a>
+                            <div class="text-center">
+                                <div class="d-inline-flex align-items-center gap-2 px-3 py-1" style="background: var(--background); border-radius: 50px; border: 1px solid var(--border);">
+                                    <i class="bi bi-shield-check text-success"></i>
+                                    <span class="text-secondary" style="font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px;">SECURE CHECKOUT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-brand">
+                        <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                        ICEPRO
+                    </a>
+                    <p style="color: var(--secondary);">The destination for hockey precision. We specialize in
+                        sharpening, repairs, and pro-grade equipment.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="sharpening.html">Skate Sharpening</a></li>
+                        <li><a href="customization.html">Stick Customization</a></li>
+                        <li><a href="repairs.html">Equipment Repair</a></li>
+                        <li><a href="team-orders.html">Team Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">Shop Online</a></li>
+                        <li><a href="blog.html">Pro Tips Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signup.html">Join Pro Club</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: var(--secondary); margin-bottom: 1rem;">Get the latest gear news and pro tips.</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email Address"
+                            style="background: var(--surface); border: 1px solid var(--border); padding: 0.5rem; border-radius: 2px; flex: 1; color: var(--text-primary);">
+                        <button class="btn btn-primary btn-sm">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid var(--border); padding-top: 20px; text-align: center; color: var(--secondary); font-size: 0.9rem;">
+                &copy; 2026 IcePro Hockey Shop. All rights reserved. Built for Elite Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/rtl-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const cartItems = document.getElementById('cart-items');
+        let cart = JSON.parse(localStorage.getItem('hockey_cart')) || {};
+
+        function renderCart() {
+            cartItems.innerHTML = '';
+            let subtotal = 0;
+
+            if (Object.keys(cart).length === 0) {
+                cartItems.innerHTML = '<tr><td colspan="4" class="text-center py-5">Your cart is empty. <br><a href="shop.html" class="btn btn-primary btn-sm mt-3">Go Shop</a></td></tr>';
+            } else {
+                for (const id in cart) {
+                    const item = cart[id];
+                    subtotal += item.price * item.qty;
+
+                    const row = `
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td class="ps-4 py-4">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="img-container" style="width: 80px; height: 80px; background: var(--background); border: 1px solid var(--border); overflow: hidden;">
+                                        <img src="${item.img}" alt="${item.id}" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1" style="font-size: 1rem;">${item.name}</h5>
+                                        <p class="small text-secondary mb-0">Professional Series</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="py-4 text-center align-middle">
+                                <div class="d-inline-flex align-items-center bg-background border-border" style="background: var(--background); border: 1px solid var(--border); border-radius: 2px;">
+                                    <button class="btn btn-sm text-secondary px-2 minus-btn" data-id="${item.id}"><i class="bi bi-dash"></i></button>
+                                    <span class="px-2 fw-bold" style="min-width: 20px;">${item.qty}</span>
+                                    <button class="btn btn-sm text-secondary px-2 plus-btn" data-id="${item.id}"><i class="bi bi-plus"></i></button>
+                                </div>
+                            </td>
+                            <td class="py-4 text-end align-middle fw-bold" style="color: var(--accent);">$${(item.price * item.qty).toFixed(2)}</td>
+                            <td class="pe-4 py-4 text-end align-middle">
+                                <button class="btn text-secondary hover-accent remove-btn" data-id="${item.id}"><i class="bi bi-trash3"></i></button>
+                            </td>
+                        </tr>
+                    `;
+                    cartItems.insertAdjacentHTML('beforeend', row);
+                }
+            }
+
+            // Update Summary
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            
+            bindEvents();
+        }
+
+        function bindEvents() {
+            document.querySelectorAll('.plus-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const id = btn.dataset.id;
+                    cart[id].qty++;
+                    localStorage.setItem('hockey_cart', JSON.stringify(cart));
+                    renderCart();
+                }
+            });
+            document.querySelectorAll('.minus-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const id = btn.dataset.id;
+                    if (cart[id].qty > 1) {
+                        cart[id].qty--;
+                        localStorage.setItem('hockey_cart', JSON.stringify(cart));
+                        renderCart();
+                    }
+                }
+            });
+            document.querySelectorAll('.remove-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const id = btn.dataset.id;
+                    delete cart[id];
+                    localStorage.setItem('hockey_cart', JSON.stringify(cart));
+                    renderCart();
+                }
+            });
+        }
+
+        renderCart();
+    </script>
+</body>
+
+</html>

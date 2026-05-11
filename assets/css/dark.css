@@ -1,0 +1,51 @@
+body.dark-mode {
+    --primary: #FFFFFF;
+    --background: #020617;
+    --surface: #0B1120;
+    --accent: #38BDF8;
+    --accent-hover: #7DD3FC;
+    --secondary: #94A3B8;
+    --text-primary: #E2E8F0;
+    --text-secondary: #94A3B8;
+    --border: #1E293B;
+    --card-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(11, 17, 32, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.dark-mode .card {
+    background: #0B1120;
+}
+
+body.dark-mode .btn-outline {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+body.dark-mode .btn-outline:hover {
+    background-color: var(--accent);
+    color: #020617;
+}
+
+body.dark-mode .nav-logo, 
+body.dark-mode .footer-brand {
+    color: #fff;
+}
+
+body.dark-mode footer {
+    background-color: #010409;
+    border-top: 1px solid var(--border);
+}
+
+/* Accent Glows */
+body.dark-mode .accent-glow {
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+body.dark-mode .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+}

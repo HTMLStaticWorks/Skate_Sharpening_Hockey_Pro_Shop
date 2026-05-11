@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | IcePro Hockey Shop</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="dark-mode">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+            document.body.classList.remove('dark-mode', 'light-mode');
+            document.body.classList.add(savedTheme);
+        })();
+    </script>
+
+        <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                ICEPRO
+            </a>
+            
+            <ul class="nav-links">
+                                <li class="dropdown">
+                    <a href="#" class="nav-link">Home <i class="bi bi-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="sharpening.html" class="nav-link">Sharpening</a></li>
+                <li><a href="customization.html" class="nav-link">Customization</a></li>
+                <li><a href="repairs.html" class="nav-link">Repairs</a></li>
+                <li><a href="team-orders.html" class="nav-link">Team Orders</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link active" style="color: var(--accent);">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle">
+                    <i class="bi bi-translate"></i>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <a href="login.html" class="nav-link d-none d-md-block">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button class="menu-toggle d-lg-none">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section-padding hero-centered" style="background: var(--surface); border-bottom: 1px solid var(--border);">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 mx-auto reveal-up">
+                    <h1 class="accent-glow" style="font-size: 3.5rem;">GET IN TOUCH</h1>
+                    <p class="text-secondary mt-3 mx-auto" style="max-width: 600px;">Have a question about our services or a custom team order? Drop us a line or visit us at the rink.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 reveal-left">
+                    
+                    <div class="mb-4 d-flex align-items-center gap-3">
+                        <div style="width: 50px; height: 50px; background: rgba(56, 189, 248, 0.1); border-radius: 2px;  justify-content: center;">
+                            <i class="bi bi-geo-alt-fill text-accent"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Address</h5>
+                            <p class="small text-secondary mb-0">123 Hockey Ave, North Rink, MN 55101</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex align-items-center gap-3">
+                        <div style="width: 50px; height: 50px; background: rgba(56, 189, 248, 0.1); border-radius: 2px;  justify-content: center;">
+                            <i class="bi bi-telephone-fill text-accent"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Phone</h5>
+                            <p class="small text-secondary mb-0">(555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-5 d-flex align-items-center gap-3">
+                        <div style="width: 50px; height: 50px; background: rgba(56, 189, 248, 0.1); border-radius: 2px;  justify-content: center;">
+                            <i class="bi bi-envelope-fill text-accent"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">Email</h5>
+                            <p class="small text-secondary mb-0">info@iceproshop.com</p>
+                        </div>
+                    </div>
+
+                    <div class="card p-4" style="background: var(--surface);">
+                        <h4 class="mb-3">Shop Hours</h4>
+                        <div class="d-flex justify-content-between small mb-2"><span class="text-secondary">Mon - Fri</span><span>10 AM - 8 PM</span></div>
+                        <div class="d-flex justify-content-between small mb-2"><span class="text-secondary">Saturday</span><span>8 AM - 6 PM</span></div>
+                        <div class="d-flex justify-content-between small"><span class="text-secondary">Sunday</span><span>9 AM - 4 PM</span></div>
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="mb-4">Follow Us</h4>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="social-icon-btn"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 reveal-right">
+                    <div class="card">
+                        <h3 class="mb-4">Send a Message</h3>
+                        <form class="row g-3">
+                            <div class="col-md-6"><input type="text" placeholder="Name" style="width: 100%; padding: 0.8rem; background: var(--background); border: 1px solid var(--border); color: #fff;"></div>
+                            <div class="col-md-6"><input type="email" placeholder="Email" style="width: 100%; padding: 0.8rem; background: var(--background); border: 1px solid var(--border); color: #fff;"></div>
+                            <div class="col-12"><input type="text" placeholder="Subject" style="width: 100%; padding: 0.8rem; background: var(--background); border: 1px solid var(--border); color: #fff;"></div>
+                            <div class="col-12"><textarea placeholder="Your Message" rows="6" style="width: 100%; padding: 0.8rem; background: var(--background); border: 1px solid var(--border); color: #fff;"></textarea></div>
+                            <div class="col-12"><button class="btn btn-primary w-100">Send Message</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="reveal-up">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.780676105282!2d-93.2721!3d44.9778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDU4JzQwLjEiTiA5M8KwMTYnMTkuNiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+            width="100%" 
+            height="450" 
+            style="border:0; filter: grayscale(100%) invert(90%) contrast(90%);" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-brand">
+                <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                ICEPRO
+            </a>
+                    <p style="color: var(--secondary);">The destination for hockey precision. We specialize in sharpening, repairs, and pro-grade equipment.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="sharpening.html">Skate Sharpening</a></li>
+                        <li><a href="customization.html">Stick Customization</a></li>
+                        <li><a href="repairs.html">Equipment Repair</a></li>
+                        <li><a href="team-orders.html">Team Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">Shop Online</a></li>
+                        <li><a href="blog.html">Pro Tips Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signup.html">Join Pro Club</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: var(--secondary); margin-bottom: 1rem;">Get the latest gear news and pro tips.</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email Address" style="background: var(--surface); border: 1px solid var(--border); padding: 0.5rem; border-radius: 2px; flex: 1; color: var(--text-primary);">
+                        <button class="btn btn-primary btn-sm">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--border); padding-top: 20px; text-align: center; color: var(--secondary); font-size: 0.9rem;">
+                &copy; 2026 IcePro Hockey Shop. All rights reserved. Built for Elite Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/rtl-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+

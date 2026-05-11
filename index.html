@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IcePro | Skate Sharpening & Hockey Pro Shop</title>
+    <meta name="description"
+        content="Elite hockey pro shop specializing in precision skate sharpening, equipment repair, and custom team gear.">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body class="dark-mode">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+            document.body.classList.remove('dark-mode', 'light-mode');
+            document.body.classList.add(savedTheme);
+        })();
+    </script> <!-- Primary Dark Mode Experience -->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                ICEPRO
+            </a>
+
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Home <i class="bi bi-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="sharpening.html" class="nav-link">Sharpening</a></li>
+                <li><a href="customization.html" class="nav-link">Customization</a></li>
+                <li><a href="repairs.html" class="nav-link">Repairs</a></li>
+                <li><a href="team-orders.html" class="nav-link">Team Orders</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle">
+                    <i class="bi bi-translate"></i>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <a href="login.html" class="nav-link d-none d-md-block">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button class="menu-toggle d-lg-none">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section section-padding hero-centered"
+        style="background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; min-height: 80vh; ">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-9 mx-auto">
+                    <h1 class="reveal-up">Precision Edge.<br><span class="accent-glow" style="color: var(--accent);">Pro
+                            Performance.</span></h1>
+                    <p class="reveal-up mx-auto mb-5"
+                        style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px;">
+                        Experience the highest standard in skate sharpening and equipment maintenance. Trusted by elite
+                        athletes and local legends alike.</p>
+                    <div class="reveal-up d-flex justify-content-center gap-3">
+                        <a href="sharpening.html" class="btn btn-primary">Book Sharpening</a>
+                        <a href="shop.html" class="btn btn-outline">Browse Shop</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Our Services -->
+    <section class="section-padding stagger-container">
+        <div class="container">
+            <div class="row mb-5 text-center justify-content-center">
+                <div class="col-lg-6">
+                    <h2 class="reveal-up">Professional Services</h2>
+                    
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 stagger-card">
+                    <div class="card">
+                        <i class="bi bi-gear-wide-connected mb-4" style="font-size: 2.5rem; color: var(--accent);"></i>
+                        <h3 class="precision-line">Skate Sharpening</h3>
+                        <p class="text-secondary mb-4">Precision automated and manual edges tailored to your skating
+                            style.</p>
+                        <a href="sharpening.html" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 stagger-card">
+                    <div class="card">
+                        <i class="bi bi-hammer mb-4" style="font-size: 2.5rem; color: var(--accent);"></i>
+                        <h3 class="precision-line">Equipment Repair</h3>
+                        <p class="text-secondary mb-4">Extend the life of your gear with professional stitching and
+                            hardware repair.</p>
+                        <a href="repairs.html" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 stagger-card">
+                    <div class="card">
+                        <i class="bi bi-palette mb-4" style="font-size: 2.5rem; color: var(--accent);"></i>
+                        <h3 class="precision-line">Custom Prep</h3>
+                        <p class="text-secondary mb-4">Pro-level stick taping, grip application, and equipment
+                            customization.</p>
+                        <a href="customization.html" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Industrial Workbench (Relatable CTA) -->
+    <section class="section-padding" style="background-color: var(--surface);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="reveal-up">The Performance Lab</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal-left">
+                    <div class="img-zoom-container">
+                        <img src="assets/img/workflow-2.png" alt="Hockey Workbench" style="border-radius: 2px;">
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 reveal-right">
+                    <p class="text-secondary mb-5">Our workshop is equipped with industrial-grade machinery to ensure
+                        your gear performs at its peak. We handle everything from bulk team orders to individual
+                        pro-tuning.</p>
+                    <ul class="mb-5">
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-3"
+                                style="color: var(--accent);"></i> Laser-Aligned Sharpening</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-3"
+                                style="color: var(--accent);"></i> Industrial Equipment Stitching</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-3"
+                                style="color: var(--accent);"></i> Professional Heat Molding</li>
+                    </ul>
+                    <a href="team-orders.html" class="btn btn-primary">Bulk Team Orders</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Pro Shop Essentials (New) -->
+    <section class="section-padding stagger-container">
+        <div class="container">
+            <div class="row mb-5 text-center justify-content-center">
+                <div class="col-lg-6">
+                    <h2 class="reveal-up">Top Performance Gear</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card text-center p-4">
+                        <img src="assets/img/shop-1.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Pro Skates">
+                        <h5 class="mb-2">Pro Skates</h5>
+                        <p class="small text-secondary">$899.99</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card text-center p-4">
+                        <img src="assets/img/shop-2.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Elite Sticks">
+                        <h5 class="mb-2">Elite Sticks</h5>
+                        <p class="small text-secondary">$299.99</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card text-center p-4">
+                        <img src="assets/img/shop-4.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Pro Gloves">
+                        <h5 class="mb-2">Pro Gloves</h5>
+                        <p class="small text-secondary">$189.99</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 stagger-card">
+                    <div class="card text-center p-4">
+                        <img src="assets/img/shop-6.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Team Helmets">
+                        <h5 class="mb-2">Team Helmets</h5>
+                        <p class="small text-secondary">$249.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="shop.html" class="btn btn-outline">Browse Full Shop</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Precision Process (New) -->
+    <section class="section-padding" style="background-color: var(--surface);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 reveal-left">
+                    <h2 class="mb-4">The Precision Process</h2>
+                    <p class="text-secondary mb-4">We follow a strict multi-step verification process for every piece of
+                        gear that enters our workshop. No shortcuts, just pure performance.</p>
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="text-center">
+                            <h3 class="accent-glow" style="font-size: 2.5rem; color: var(--accent);">01</h3>
+                            <p class="small uppercase">Inspection</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="accent-glow" style="font-size: 2.5rem; color: var(--accent);">02</h3>
+                            <p class="small uppercase">Precision</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="accent-glow" style="font-size: 2.5rem; color: var(--accent);">03</h3>
+                            <p class="small uppercase">Quality</p>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="btn btn-outline btn-sm">Read Our Guide</a>
+                </div>
+                <div class="col-lg-6 offset-lg-1 reveal-right">
+                    <div class="img-zoom-container">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/31/19/21/hockey-1294931_1280.png" alt="Process"
+                            style="filter: grayscale(1); opacity: 0.8;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Final CTA / Newsletter -->
+    <section class="section-padding hero-centered"
+        style="background: linear-gradient(rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.1));">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-7">
+                    <h2 class="mb-4 reveal-up">Ready for the Next Game?</h2>
+                    <p class="text-secondary mb-5 reveal-up">Join the IcePro Club and get exclusive access to
+                        maintenance schedules, pro tips, and early equipment drops.</p>
+                    <div class="reveal-up">
+                        <a href="signup.html" class="btn btn-primary btn-lg">Join the Pro Club</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-brand">
+                        <i class="bi bi-lightning-charge-fill accent-glow"></i>
+                        ICEPRO
+                    </a>
+                    <p style="color: var(--secondary);">The destination for hockey precision. We specialize in
+                        sharpening, repairs, and pro-grade equipment.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="sharpening.html">Skate Sharpening</a></li>
+                        <li><a href="customization.html">Stick Customization</a></li>
+                        <li><a href="repairs.html">Equipment Repair</a></li>
+                        <li><a href="team-orders.html">Team Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">Shop Online</a></li>
+                        <li><a href="blog.html">Pro Tips Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signup.html">Join Pro Club</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: var(--secondary); margin-bottom: 1rem;">Get the latest gear news and pro tips.</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email Address"
+                            style="background: var(--surface); border: 1px solid var(--border); padding: 0.5rem; border-radius: 2px; flex: 1; color: var(--text-primary);">
+                        <button class="btn btn-primary btn-sm">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid var(--border); padding-top: 20px; text-align: center; color: var(--secondary); font-size: 0.9rem;">
+                &copy; 2026 IcePro Hockey Shop. All rights reserved. Built for Elite Performance.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/rtl-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

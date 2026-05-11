@@ -1,0 +1,73 @@
+/* Initial states for GSAP animations */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+/* Hover Zoom Effect */
+.img-zoom-container {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.img-zoom-container img {
+    transition: transform 0.5s ease;
+}
+
+.img-zoom-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Precision Line Animation */
+.precision-line {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.precision-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.card:hover .precision-line::after {
+    width: 100%;
+}
+
+/* Smooth Booking Transition */
+.booking-step {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.booking-step.hidden {
+    display: none;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body:not(.dark-mode) .glass-card {
+    background: rgba(15, 23, 42, 0.05);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+}
