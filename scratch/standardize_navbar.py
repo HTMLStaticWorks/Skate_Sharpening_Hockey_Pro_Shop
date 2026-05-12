@@ -1,43 +1,37 @@
 import os
+import re
 
-pages = {
-    'index.html': 'Home',
-    'sharpening.html': 'Sharpening',
-    'customization.html': 'Customization',
-    'repairs.html': 'Repairs',
-    'team-orders.html': 'Team Orders',
-    'shop.html': 'Shop',
-    'blog.html': 'Blog',
-    'contact.html': 'Contact'
-}
-
-html_files = [f for f in os.listdir('.') if f.endswith('.html')]
-
-def get_navbar(active_page_name):
-    links = []
-    for href, name in pages.items():
-        active_class = ' active" style="color: var(--accent);' if name == active_page_name else ''
-        links.append(f'                <li><a href="{href}" class="nav-link{active_class}">{name}</a></li>')
-    
-    links_html = '\n'.join(links)
-    
-    return f'''    <!-- Navbar -->
+# The Final Navbar Template (Version 5)
+# - RTL button has "RTL" text instead of icon
+# - Compact button sizes and refined menu font
+REFERENCE_NAVBAR = """    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-logo">
                 <i class="bi bi-lightning-charge-fill accent-glow"></i>
                 ICEPRO
             </a>
-            
+
             <ul class="nav-links">
-{links_html}
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Home <i class="bi bi-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="sharpening.html" class="nav-link">Sharpening</a></li>
+                <li><a href="customization.html" class="nav-link">Customization</a></li>
+                <li><a href="repairs.html" class="nav-link">Repairs</a></li>
+                <li><a href="team-orders.html" class="nav-link">Team Orders</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="cart.html" class="nav-link"><i class="bi bi-cart3"></i></a>
-                <button id="rtl-toggle" class="theme-toggle">
-                    <i class="bi bi-translate"></i>
-                </button>
+                <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle" style="font-size: 0.75rem; font-weight: 700;">RTL</button>
                 <button id="theme-toggle" class="theme-toggle">
                     <i class="bi bi-sun-fill"></i>
                 </button>
@@ -48,28 +42,44 @@ def get_navbar(active_page_name):
                 </button>
             </div>
         </div>
-    </nav>'''
+    </nav>"""
 
-import re
-
-for file_name in html_files:
-    if file_name in ['login.html', 'signup.html', '404.html']:
-        continue
-        
-    with open(file_name, 'r', encoding='utf-8') as f:
+def update_file(file_path):
+    if not file_path.endswith('.html'):
+        return
+    
+    with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    active_name = pages.get(file_name, '')
-    new_navbar = get_navbar(active_name)
+    # 1. Update Navbar
+    pattern = re.compile(r'<!-- Navbar -->\s*<nav class="navbar">.*?</nav>', re.DOTALL)
+    if not pattern.search(content):
+        pattern = re.compile(r'<nav class="navbar">.*?</nav>', re.DOTALL)
     
-    # Replace the existing navbar block
-    # This regex tries to find the <nav> block
-    content = re.sub(r'<!-- Navbar -->\s*<nav class="navbar">.*?</nav>', new_navbar, content, flags=re.DOTALL)
-    # If no comment was found, try replacing just the <nav> block
-    if '<nav class="navbar">' in content and new_navbar not in content:
-         content = re.sub(r'<nav class="navbar">.*?</nav>', new_navbar, content, flags=re.DOTALL)
+    if pattern.search(content):
+        new_content = pattern.sub(REFERENCE_NAVBAR, content)
+    else:
+        new_content = content
 
-    with open(file_name, 'w', encoding='utf-8') as f:
-        f.write(content)
+    # 2. Fix the specific 'n>' typo in sharpening.html if present
+    if 'sharpening.html' in file_path:
+        new_content = new_content.replace('</section>\n n>', '</section>')
+        new_content = new_content.replace('</section>\nn>', '</section>')
+        new_content = new_content.replace('\n n>\n', '\n')
+        new_content = new_content.replace('n>\n\n    <!-- Footer -->', '\n    <!-- Footer -->')
 
-print(f"Standardized navbar in {len(html_files)} files.")
+    if new_content != content:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        print(f"Updated: {file_path}")
+    else:
+        print(f"No change or already up to date: {file_path}")
+
+def main():
+    root_dir = r"c:\Users\sriva\OneDrive\Desktop\may websites\Skate_Sharpening_Hockey_Pro_Shop"
+    for filename in os.listdir(root_dir):
+        if filename.endswith(".html"):
+            update_file(os.path.join(root_dir, filename))
+
+if __name__ == "__main__":
+    main()
