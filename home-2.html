@@ -46,18 +46,33 @@
                 <li><a href="shop.html" class="nav-link">Shop</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                
+                <!-- Mobile Actions (Hidden on Desktop) -->
+                <li class="mobile-nav-actions d-lg-none">
+                    <div class="mobile-toggle-group">
+                        <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
+                        <button id="rtl-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                        <button id="theme-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="nav-link text-center mt-2">Login</a>
+                </li>
             </ul>
 
             <div class="nav-actions">
-                <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
-                <button id="rtl-toggle" class="theme-toggle">
+                <a href="cart.html" class="nav-icon-btn d-none d-lg-flex"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-translate"></i>
                 </button>
-                <button id="theme-toggle" class="theme-toggle">
+                <button id="theme-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-sun-fill"></i>
                 </button>
                 <a href="login.html" class="nav-link d-none d-md-block">Login</a>
-                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <a href="signup.html" class="btn btn-primary d-none d-lg-flex">Sign Up</a>
                 <button class="menu-toggle d-lg-none">
                     <i class="bi bi-list"></i>
                 </button>
@@ -84,22 +99,19 @@
     <!-- 1. Professional Services (Equipment Showcase) -->
     <section class="section-padding">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="reveal-up">Professional Maintenance</h2>
-                
-            </div>
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 reveal-left">
+                    <h2 class="reveal-up">Professional Maintenance</h2>
                     <p class="text-secondary mb-4">We don't just sell gear; we master it. Our technicians have decades
                         of experience in high-performance tuning for professional and amateur hockey players.</p>
                     <div class="row g-4">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <h4 class="mb-2"><i class="bi bi-cpu me-2" style="color: var(--accent);"></i> Tech Infused
                             </h4>
                             <p class="small text-secondary">Laser-aligned sharpening machines for micrometer precision.
                             </p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <h4 class="mb-2"><i class="bi bi-shield-check me-2" style="color: var(--accent);"></i> Pro
                                 Certified</h4>
                             <p class="small text-secondary">Every repair meets international safety standards.</p>

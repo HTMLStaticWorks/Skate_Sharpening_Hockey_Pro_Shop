@@ -44,18 +44,33 @@
                 <li><a href="shop.html" class="nav-link">Shop</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                
+                <!-- Mobile Actions (Hidden on Desktop) -->
+                <li class="mobile-nav-actions d-lg-none">
+                    <div class="mobile-toggle-group">
+                        <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
+                        <button id="rtl-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                        <button id="theme-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="nav-link text-center mt-2">Login</a>
+                </li>
             </ul>
 
             <div class="nav-actions">
-                <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
-                <button id="rtl-toggle" class="theme-toggle">
+                <a href="cart.html" class="nav-icon-btn d-none d-lg-flex"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-translate"></i>
                 </button>
-                <button id="theme-toggle" class="theme-toggle">
+                <button id="theme-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-sun-fill"></i>
                 </button>
                 <a href="login.html" class="nav-link d-none d-md-block">Login</a>
-                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <a href="signup.html" class="btn btn-primary d-none d-lg-flex">Sign Up</a>
                 <button class="menu-toggle d-lg-none">
                     <i class="bi bi-list"></i>
                 </button>
@@ -71,7 +86,7 @@
                 <div class="col-lg-8 mx-auto reveal-up">
                     <span class="accent-glow" style="color: var(--accent); font-weight: 700; letter-spacing: 2px;">ELITE
                         SERVICE</span>
-                    <h1 class="mb-4" style="font-size: 3.5rem;">PRECISION SKATE SHARPENING</h1>
+                    <h1 class="mb-4">PRECISION SKATE SHARPENING</h1>
                     <p class="text-secondary mx-auto" style="max-width: 700px;">Using the latest Sparxâ„¢ and manual
                         finishing techniques, we provide the most consistent edges in the game. Whether you like a
                         shallow or deep, we have you covered.</p>
@@ -138,9 +153,10 @@
             <div class="row g-4 stagger-container">
                 <div class="col-lg-4 stagger-card">
                     <div class="card h-100 text-center p-5">
-                        <div class="mb-4 d-inline-flex align-items-center justify-content-center" 
-                             style="width: 70px; height: 70px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 2px; margin: 0 auto;">
-                            <i class="bi bi-bullseye" style="font-size: 1.8rem; color: var(--accent);"></i>
+                        <div class="text-center mb-4">
+                            <img src="assets/img/tech-1.png" class="rounded-circle mx-auto" 
+                                 style="width: 140px; height: 140px; object-fit: cover; border: 2px solid var(--accent); display: block;" 
+                                 alt="Laser Alignment">
                         </div>
                         <h4 class="mb-3">LASER ALIGNMENT</h4>
                         <p class="text-secondary mb-0">Every skate is laser-checked for perfectly even edges, ensuring no "falling off" during sharp turns.</p>
@@ -148,9 +164,10 @@
                 </div>
                 <div class="col-lg-4 stagger-card">
                     <div class="card h-100 text-center p-5">
-                        <div class="mb-4 d-inline-flex align-items-center justify-content-center" 
-                             style="width: 70px; height: 70px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 2px; margin: 0 auto;">
-                            <i class="bi bi-snow" style="font-size: 1.8rem; color: var(--accent);"></i>
+                        <div class="text-center mb-4">
+                            <img src="assets/img/tech-2.png" class="rounded-circle mx-auto" 
+                                 style="width: 140px; height: 140px; object-fit: cover; border: 2px solid var(--accent); display: block;" 
+                                 alt="Custom Radius">
                         </div>
                         <h4 class="mb-3">CUSTOM RADIUS</h4>
                         <p class="text-secondary mb-0">Choose from traditional ROH (Radius of Hollow) or advanced FBV (Flat Bottom V) profiling.</p>
@@ -158,9 +175,10 @@
                 </div>
                 <div class="col-lg-4 stagger-card">
                     <div class="card h-100 text-center p-5">
-                        <div class="mb-4 d-inline-flex align-items-center justify-content-center" 
-                             style="width: 70px; height: 70px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 2px; margin: 0 auto;">
-                            <i class="bi bi-clock-history" style="font-size: 1.8rem; color: var(--accent);"></i>
+                        <div class="text-center mb-4">
+                            <img src="assets/img/tech-3.png" class="rounded-circle mx-auto" 
+                                 style="width: 140px; height: 140px; object-fit: cover; border: 2px solid var(--accent); display: block;" 
+                                 alt="Express Service">
                         </div>
                         <h4 class="mb-3">EXPRESS SERVICE</h4>
                         <p class="text-secondary mb-0">Need it now? Our express machines can have you back on the ice in under 10 minutes.</p>

@@ -44,18 +44,33 @@
                 <li><a href="shop.html" class="nav-link">Shop</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                
+                <!-- Mobile Actions (Hidden on Desktop) -->
+                <li class="mobile-nav-actions d-lg-none">
+                    <div class="mobile-toggle-group">
+                        <a href="cart.html" class="nav-icon-btn active" style="color: var(--accent); border-color: var(--accent);"><i class="bi bi-cart3"></i></a>
+                        <button id="rtl-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                        <button id="theme-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="nav-link text-center mt-2">Login</a>
+                </li>
             </ul>
 
             <div class="nav-actions">
-                <a href="cart.html" class="nav-icon-btn active" style="color: var(--accent); border-color: var(--accent);"><i class="bi bi-cart3"></i></a>
-                <button id="rtl-toggle" class="theme-toggle">
+                <a href="cart.html" class="nav-icon-btn active d-none d-lg-flex" style="color: var(--accent); border-color: var(--accent);"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-translate"></i>
                 </button>
-                <button id="theme-toggle" class="theme-toggle">
+                <button id="theme-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-sun-fill"></i>
                 </button>
                 <a href="login.html" class="nav-link d-none d-md-block">Login</a>
-                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <a href="signup.html" class="btn btn-primary d-none d-lg-flex">Sign Up</a>
                 <button class="menu-toggle d-lg-none">
                     <i class="bi bi-list"></i>
                 </button>
@@ -69,7 +84,7 @@
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8 mx-auto reveal-up">
-                    <h1 class="accent-glow" style="font-size: 3.5rem;">YOUR CART</h1>
+                    <h1 class="accent-glow">YOUR CART</h1>
                     <p class="text-secondary mt-3">Review your high-performance gear before hitting the ice.</p>
                 </div>
             </div>

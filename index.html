@@ -50,18 +50,33 @@
                 <li><a href="shop.html" class="nav-link">Shop</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                
+                <!-- Mobile Actions (Hidden on Desktop) -->
+                <li class="mobile-nav-actions d-lg-none">
+                    <div class="mobile-toggle-group">
+                        <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
+                        <button id="rtl-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                        <button id="theme-toggle-mobile" class="theme-toggle">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    <a href="login.html" class="nav-link text-center mt-2">Login</a>
+                </li>
             </ul>
 
             <div class="nav-actions">
-                <a href="cart.html" class="nav-icon-btn"><i class="bi bi-cart3"></i></a>
-                <button id="rtl-toggle" class="theme-toggle">
+                <a href="cart.html" class="nav-icon-btn d-none d-lg-flex"><i class="bi bi-cart3"></i></a>
+                <button id="rtl-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-translate"></i>
                 </button>
-                <button id="theme-toggle" class="theme-toggle">
+                <button id="theme-toggle" class="theme-toggle d-none d-lg-flex">
                     <i class="bi bi-sun-fill"></i>
                 </button>
                 <a href="login.html" class="nav-link d-none d-md-block">Login</a>
-                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <a href="signup.html" class="btn btn-primary d-none d-lg-flex">Sign Up</a>
                 <button class="menu-toggle d-lg-none">
                     <i class="bi bi-list"></i>
                 </button>
@@ -71,19 +86,21 @@
 
     <!-- Hero Section -->
     <section class="hero-section section-padding hero-centered"
-        style="background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; min-height: 80vh; ">
+        style="background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; min-height: 80vh;">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-9 mx-auto">
-                    <h1 class="reveal-up">Precision Edge.<br><span class="accent-glow" style="color: var(--accent);">Pro
+                    <h1 class="reveal-up" style="color: #ffffff;">Precision Edge.<br><span class="accent-glow"
+                            style="color: #38BDF8;">Pro
                             Performance.</span></h1>
                     <p class="reveal-up mx-auto mb-5"
-                        style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px;">
+                        style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); max-width: 700px;">
                         Experience the highest standard in skate sharpening and equipment maintenance. Trusted by elite
                         athletes and local legends alike.</p>
                     <div class="reveal-up d-flex justify-content-center gap-3">
                         <a href="sharpening.html" class="btn btn-primary">Book Sharpening</a>
-                        <a href="shop.html" class="btn btn-outline">Browse Shop</a>
+                        <a href="shop.html" class="btn btn-outline"
+                            style="color: #ffffff; border-color: #ffffff;">Browse Shop</a>
                     </div>
                 </div>
             </div>
@@ -96,7 +113,7 @@
             <div class="row mb-5 text-center justify-content-center">
                 <div class="col-lg-6">
                     <h2 class="reveal-up">Professional Services</h2>
-                    
+
                 </div>
             </div>
             <div class="row g-4">
@@ -134,9 +151,6 @@
     <!-- 2. Industrial Workbench (Relatable CTA) -->
     <section class="section-padding" style="background-color: var(--surface);">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="reveal-up">The Performance Lab</h2>
-            </div>
             <div class="row align-items-center">
                 <div class="col-lg-6 reveal-left">
                     <div class="img-zoom-container">
@@ -144,6 +158,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1 reveal-right">
+                    <h2 class="reveal-up">The Performance Lab</h2>
                     <p class="text-secondary mb-5">Our workshop is equipped with industrial-grade machinery to ensure
                         your gear performs at its peak. We handle everything from bulk team orders to individual
                         pro-tuning.</p>
@@ -172,28 +187,34 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 stagger-card">
                     <div class="card text-center p-4">
-                        <img src="assets/img/shop-1.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Pro Skates">
+                        <img src="assets/img/shop-1.png" class="mb-4 mx-auto"
+                            style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Pro Skates">
                         <h5 class="mb-2">Pro Skates</h5>
                         <p class="small text-secondary">$899.99</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 stagger-card">
                     <div class="card text-center p-4">
-                        <img src="assets/img/shop-2.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Elite Sticks">
+                        <img src="assets/img/shop-2.png" class="mb-4 mx-auto"
+                            style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;"
+                            alt="Elite Sticks">
                         <h5 class="mb-2">Elite Sticks</h5>
                         <p class="small text-secondary">$299.99</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 stagger-card">
                     <div class="card text-center p-4">
-                        <img src="assets/img/shop-4.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Pro Gloves">
+                        <img src="assets/img/shop-4.png" class="mb-4 mx-auto"
+                            style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Pro Gloves">
                         <h5 class="mb-2">Pro Gloves</h5>
                         <p class="small text-secondary">$189.99</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 stagger-card">
                     <div class="card text-center p-4">
-                        <img src="assets/img/shop-6.png" class="mb-4 mx-auto" style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;" alt="Team Helmets">
+                        <img src="assets/img/shop-6.png" class="mb-4 mx-auto"
+                            style="height: 220px; width: 100%; object-fit: cover; border-radius: 2px;"
+                            alt="Team Helmets">
                         <h5 class="mb-2">Team Helmets</h5>
                         <p class="small text-secondary">$249.99</p>
                     </div>
