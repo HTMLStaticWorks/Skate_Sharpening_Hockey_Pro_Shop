@@ -9,6 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mobile Dropdown Toggle
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.nav-link');
+        if (link) {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
     // Sticky Navbar on Scroll
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
