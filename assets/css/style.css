@@ -976,3 +976,34 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* Password Toggle */
+.password-field-wrapper {
+    position: relative;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--secondary);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.password-toggle-btn:hover {
+    color: var(--accent);
+}
+
+[dir="rtl"] .password-toggle-btn {
+    right: auto;
+    left: 1rem;
+}

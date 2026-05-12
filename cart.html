@@ -21,7 +21,7 @@
         })();
     </script>
 
-                                    <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-logo">
@@ -112,41 +112,54 @@
 
                 <!-- Order Summary -->
                 <div class="col-lg-4">
-                    <div class="card reveal-right p-0 overflow-hidden" style="position: sticky; top: 120px; border: 1px solid var(--border);">
+                    <div class="card reveal-right p-0 overflow-hidden"
+                        style="position: sticky; top: 120px; border: 1px solid var(--border);">
                         <div class="p-4" style="background: var(--background); border-bottom: 1px solid var(--border);">
-                            <h4 class="mb-0 precision-line" style="font-size: 1.1rem; letter-spacing: 1px;">ORDER SUMMARY</h4>
+                            <h4 class="mb-0 precision-line" style="font-size: 1.1rem; letter-spacing: 1px;">ORDER
+                                SUMMARY</h4>
                         </div>
-                        
+
                         <div class="p-4">
                             <div class="summary-row d-flex justify-content-between mb-3">
-                                <span class="text-secondary small text-uppercase fw-bold" style="letter-spacing: 0.5px;">Subtotal</span>
-                                <span class="fw-bold" id="subtotal" style="font-family: var(--font-heading);">$0.00</span>
+                                <span class="text-secondary small text-uppercase fw-bold"
+                                    style="letter-spacing: 0.5px;">Subtotal</span>
+                                <span class="fw-bold" id="subtotal"
+                                    style="font-family: var(--font-heading);">$0.00</span>
                             </div>
                             <div class="summary-row d-flex justify-content-between mb-3">
-                                <span class="text-secondary small text-uppercase fw-bold" style="letter-spacing: 0.5px;">Shipping</span>
+                                <span class="text-secondary small text-uppercase fw-bold"
+                                    style="letter-spacing: 0.5px;">Shipping</span>
                                 <span class="text-success small fw-bold text-uppercase">Free</span>
                             </div>
                             <div class="summary-row d-flex justify-content-between mb-0">
-                                <span class="text-secondary small text-uppercase fw-bold" style="letter-spacing: 0.5px;">Est. Tax (8%)</span>
+                                <span class="text-secondary small text-uppercase fw-bold"
+                                    style="letter-spacing: 0.5px;">Est. Tax (8%)</span>
                                 <span class="fw-bold" id="tax" style="font-family: var(--font-heading);">$0.00</span>
                             </div>
                         </div>
 
-                        <div class="p-4 mt-2" style="background: rgba(56, 189, 248, 0.03); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+                        <div class="p-4 mt-2"
+                            style="background: rgba(56, 189, 248, 0.03); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
                             <div class="d-flex justify-content-between align-items-center">
                                 <h5 class="mb-0 text-uppercase fw-bold" style="letter-spacing: 1px;">Total</h5>
                                 <div class="text-end">
-                                    <h2 class="mb-0 accent-glow" id="total" style="color: var(--accent); line-height: 1; font-weight: 900; font-family: var(--font-heading);">$0.00</h2>
+                                    <h2 class="mb-0 accent-glow" id="total"
+                                        style="color: var(--accent); line-height: 1; font-weight: 900; font-family: var(--font-heading);">
+                                        $0.00</h2>
                                 </div>
                             </div>
                         </div>
 
                         <div class="p-4">
-                            <a href="checkout.html" class="btn btn-primary w-100 py-3 mb-3" style="font-weight: 700; letter-spacing: 1px;">PROCEED TO CHECKOUT</a>
+                            <a href="checkout.html" class="btn btn-primary w-100 py-3 mb-3"
+                                style="font-weight: 700; letter-spacing: 1px;">PROCEED TO CHECKOUT</a>
                             <div class="text-center">
-                                <div class="d-inline-flex align-items-center gap-2 px-3 py-1" style="background: var(--background); border-radius: 50px; border: 1px solid var(--border);">
+                                <div class="d-inline-flex align-items-center gap-2 px-3 py-1"
+                                    style="background: var(--background); border-radius: 50px; border: 1px solid var(--border);">
                                     <i class="bi bi-shield-check text-success"></i>
-                                    <span class="text-secondary" style="font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px;">SECURE CHECKOUT</span>
+                                    <span class="text-secondary"
+                                        style="font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px;">SECURE
+                                        CHECKOUT</span>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +280,7 @@
             document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
             document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
             document.getElementById('total').textContent = `$${total.toFixed(2)}`;
-            
+
             bindEvents();
         }
 
