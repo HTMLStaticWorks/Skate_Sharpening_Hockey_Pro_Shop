@@ -278,6 +278,29 @@ body {
     padding-right: 3rem !important;
 }
 
+/* Responsive Utilities */
+@media (min-width: 1024px) {
+    .d-lg-flex {
+        display: flex !important;
+    }
+    .d-lg-none {
+        display: none !important;
+    }
+    .d-lg-block {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .d-lg-none {
+        display: block !important;
+    }
+    .d-lg-flex {
+        display: none !important;
+    }
+}
+
+
 
 
 
