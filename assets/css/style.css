@@ -327,7 +327,8 @@ body {
     white-space: nowrap;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--accent);
 }
 
@@ -381,7 +382,8 @@ body {
     transition: var(--transition);
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item.active {
     background-color: rgba(37, 99, 235, 0.05);
     color: var(--accent);
     padding-left: 1.75rem;
@@ -691,7 +693,7 @@ footer {
     }
 
     .auth-form-side {
-        max-width: 100%;
+        max-width: 480px;
         padding: 2rem;
         border-left: none;
     }

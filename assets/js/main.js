@@ -48,4 +48,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Active Link Highlighting
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const menuLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+    
+    menuLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || 
+            (currentPath.startsWith('blog-') && href === 'blog.html') || 
+            (currentPath.startsWith('product-') && href === 'shop.html')) {
+            link.classList.add('active');
+            
+            // If it's a dropdown item, also highlight the parent nav-link
+            if (link.classList.contains('dropdown-item')) {
+                const parentNav = link.closest('.dropdown').querySelector('.nav-link');
+                if (parentNav) parentNav.classList.add('active');
+            }
+        }
+    });
 });

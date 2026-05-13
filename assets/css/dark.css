@@ -32,7 +32,11 @@ body.dark-mode .btn-outline:hover {
 
 body.dark-mode .nav-logo, 
 body.dark-mode .footer-brand {
-    color: #fff;
+    color: #fff !important;
+}
+
+body.dark-mode .black-lightning {
+    color: #fff !important;
 }
 
 body.dark-mode footer {
