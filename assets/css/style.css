@@ -246,6 +246,43 @@ body {
     transition: var(--transition);
 }
 
+.black-lightning {
+    color: #000000 !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.ms-auto {
+    margin-left: auto !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.gap-2 {
+    gap: 0.5rem !important;
+}
+
+.align-items-start {
+    align-items: flex-start !important;
+}
+
+.pe-5 {
+    padding-right: 3rem !important;
+}
+
+
+
+
+
+
 .footer-brand {
     margin-bottom: 1.5rem;
 }
@@ -700,6 +737,21 @@ footer {
     gap: 1rem;
     margin-top: 2rem;
 }
+
+@media (max-width: 576px) {
+    .auth-screen {
+        padding: 1rem;
+    }
+    
+    .auth-form-side {
+        padding: 1.5rem;
+    }
+    
+    .social-login-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* Utilities */
 .uppercase {
